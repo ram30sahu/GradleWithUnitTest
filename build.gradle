@@ -1,0 +1,37 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'spring-boot' //used for to plugin spring boot
+apply plugin: 'war' //used plugin war to create war file
+
+war {
+	baseName='GradleProject' //war file name
+	version=''
+} //used for give war file detail
+
+buildscript {
+		repositories {
+			mavenCentral() 	//used for maven Central dependency
+		}
+		dependencies {
+			classpath('org.springframework.boot:spring-boot-gradle-plugin:1.2.6.RELEASE')
+			} //this is used for run application as spring boot
+
+}
+
+repositories{
+	mavenCentral()
+} 		//used for to download jar file using dependencies
+
+sourceCompatibility = 1.8 //used for define your jdk version
+targetCompatibility = 1.8
+
+
+dependencies {
+	compile('org.springframework.boot:spring-boot-starter-web') //used for to download spring boot app jar
+ 	compile 'org.springframework:spring-webmvc:4.2.4.RELEASE' //used for download spring mvc jar file
+	testCompile "org.springframework.boot:spring-boot-starter-test:1.2.4.RELEASE"
+ }		
+ 
+task wrapper(type: Wrapper) {
+	gradleVersion = '2.9'
+} 		//used for to define gradle version
