@@ -1,0 +1,13 @@
+@RequestMapping(value="Fibonacci", method=RequestMethod.GET)
+	public ResponseEntity<BigInteger> getFibonacci(@RequestParam("n") @NotNull int id ) throws NumberFormatException {
+		
+		CacheControl cacheControl=CacheControl.noCache();
+		log.info("Executing the getFibonacci(): start");
+			if(id < 0){
+				log.error(" positive integer value required");
+				throw new NumberFormatException("Please provide positive integer value");
+			}
+			BigInteger n1=apiService.getFibonacci(id);
+			log.info("Executing the getFibonacci(): end");
+			return ResponseEntity.ok().cacheControl(cacheControl).body(n1);
+	}

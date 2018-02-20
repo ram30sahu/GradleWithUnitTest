@@ -1,0 +1,15 @@
+@Test
+	public void   getFibonacciTest() throws Exception {
+		//Integer expectResult = 55;
+		BigInteger bi = BigInteger.valueOf(55);
+		//when(serv.getMsg("Pankaj")).thenReturn(Arrays.asList(expectResult));
+		when(serv.getFibonacci(10)).thenReturn(bi);
+		
+			int num= 10;
+		   mockMvc.perform(get("/Fibonacci?n="+num).accept(MediaType.APPLICATION_JSON)).
+		   andExpect(status().isOk()).andExpect(content().string("55"));
+         
+           verify(serv, times(1)).getFibonacci(10);
+	       verifyNoMoreInteractions(serv);
+   }
+	
