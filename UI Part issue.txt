@@ -1,0 +1,34 @@
+[‎3/‎15/‎2018 4:08 PM]  
+hi
+what is the issue
+ 
+[‎3/‎15/‎2018 4:09 PM]  Swati11:  
+I am able to run env.bat. build and run.bat dev commands
+after that able to login.
+but when ia m trying to get the detauil for an evevnt, it says {"status":404,"message":"Records doesn't exists for this ID"} ]
+ 
+[‎3/‎15/‎2018 4:10 PM]  
+what is the url u r using
+ 
+[‎3/‎15/‎2018 4:11 PM]  Swati11:  
+http://localhost:8085/event/1 
+After login, with http://localhost:8085  url, i can see Hi message in browser, 
+That maens it is working.
+But when iam trying with diff event id's i am getting above error
+ 
+[‎3/‎15/‎2018 4:14 PM]  Swati11:  
+Any idea, what can be done to resiolve it
+?
+ 
+[‎3/‎15/‎2018 4:16 PM]  
+sure 
+r u able to get response for tis url /user/current 
+ 
+[‎3/‎15/‎2018 4:17 PM]  
+this url http://localhost:8085/user/current 
+ 
+[‎3/‎15/‎2018 4:19 PM]  Swati11:  
+{"userEmailid":"ITLINFOSYS","accessCode":"USER","active":null,"createdBy":null,"createdDt":null,"lastUpdatedBy":null,"lastUpdatedDt":null} 
+this is the respnse.
+ 
+Q1. Table name mismatch
