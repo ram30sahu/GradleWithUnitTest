@@ -1,0 +1,5 @@
+com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'created_by' cannot be null
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_141]
+	
+	 "message": "could not execute statement; SQL [n/a]; constraint [null]; 
+	 nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement",
