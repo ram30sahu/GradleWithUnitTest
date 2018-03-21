@@ -1,0 +1,5 @@
+Failed tests: 
+  NominationControllerTests.findAllNominationByAnchor:63 Status expected:<200> but was:<401>
+  NominationControllerTests.findAllNominationByUser:72 Status expected:<409> but was:<401>
+  NominationControllerTests.findNominationByAnchorUsingNomId:89 Status expected:<200> but was:<401>
+  NominationControllerTests.findNominationByUser:98 Status expected:<200> but was:<401>
